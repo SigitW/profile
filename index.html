@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="dist/bootstrap-icons/font/bootstrap-icons.css"/>
+    <script src="dist/jquery-3.6.0.min.js"></script>
+    <script src="dist/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+        .grd{
+            background-image: linear-gradient(to right, navy ,#ee82ee);
+        }
+        .bg-pt{
+            background-image: url('images/doodad.png');
+        }
+        .navy{
+            color: navy;
+        }
+        .panel-inner-rounded{
+            padding: 20px;background-color: white;box-shadow: 2px 5px 6px 0px gray; border-radius: 10px;
+        }
+        .panel-inner{
+            padding: 20px;background-color: white;box-shadow: 2px 5px 6px 0px gray;
+        }
+        .panel-inner:hover{
+            transition: 0.5s;
+            transform: translateY(-2.1rem);
+            cursor: pointer;
+        }
+        .bg-white{
+            background-color: white;
+        }
+        .bg-img-parallax{
+            background-image: url('images/bg2.jpg'); background-repeat: no-repeat;background-size: cover;background-attachment: fixed;background-position: center;
+        }
+        .panel-inner-rounded:hover{
+            background-color: blueviolet;color: white;cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="padding-top: 20px;min-height: 600px;background-color:rgba(235,235, 235);">
+
+        <div class="container">
+            <div class="row " style="min-height: 50px;position: relative;">
+                <div class="col-md-1 col-xs-2">
+                    <h3 class="bi bi-chat-left-heart-fill navy mx-auto" style="width: fit-content;"></h3>
+                </div>
+                <div class="col-md-11 col-xs-10">
+                    <h3><span class="txt-welcome" style="display:none;"></span></h3>
+                </div>
+            </div>
+           
+            <div class="row rounded-3 grd" style="color: white;box-shadow: 2px 5px 6px 0px gray; height:450px;padding-top: 60px; padding-bottom: 60px; padding-left: 80px; padding-right: 80px; position: relative;z-index: 1;margin-bottom: 20px;" >
+                    <div class="col-md-6 col-xs-12 ">
+                        <div style="width: fit-content;display: block;font-size: 60px;">Hi !</div>
+                        <div style="font-size: 18px;">Saya <span style="font-weight: bold;font-size: 30px;">Sigit Wahyu Wibowo</span>. </div>
+                        <div style="font-size: 18px;">Seorang <span style="font-weight: bold;font-size: 30px;">WEB Developer</span>. Senang Bertemu dengan Anda.</div>
+                        <div style="font-size: 18px;"><span style="font-weight: bold;">Scroll Kebawah</span> untuk Mengetahui Lebih Lagi tentang Saya.</div>
+                        <!-- <button type="button" class="btn btn-dark mx-auto" style="display:block;width:fit-content;font-size: 18px;margin-top: 70px;"><i class="bi bi-box-arrow-in-down-right"></i> Mulai Tour</button> -->
+                    </div>
+                    <div class="col-md-6 col-xs-12 ">
+                        <img src="images/poster_me.png" style="display: block;width: fit-content;position: relative;z-index: 2;" class="mx-auto img-poster-me"/>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bg-white" style="z-index: 3;position: relative;padding-bottom: 50px;">
+        <div class="container">
+            <div style="width:fit-content;display: block;padding-top: 100px;" class="mx-auto">
+                <div style="font-size: 30px;width: fit-content;color: navy;" class="row mx-auto"><div>Pendidikan Formal<hr></div></div>
+                <div class="row" style="margin-top: 80px;">
+                    <div class="col-md-12 content-pendidikan" style="position:relative;overflow-x: scroll;height: fit-content;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-img-parallax" style="position: relative;height: fit-content; padding-bottom: 50px;">
+        <div class="container">
+            <div style="width:fit-content;display: block;padding-top: 100px;" class="mx-auto">
+                <div style="font-size: 30px;width: fit-content;color: white" class="row mx-auto"><div>Pengalaman Kerja<hr></div></div>
+                <div class="row" style="margin-top: 80px;color: gray;padding-right: 10px; padding-left: 10px;">
+                    <div class="col-md-6 col-xs-12" style="margin-bottom: 10px;">
+                        <div class="panel-inner-rounded">
+                            <h3>Full Stack Web Developer</h3>
+                            <h5>PT Micronet Gigatech Indoglobal</h5>
+                            <div style="font-weight: bold;">2016 - Sekarang</div>
+                            <br>
+                            <div>Merancang, Membangun, Maintenance Aplikasi Berbasis WEB sesuai dengan Permintaan Client</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12" style="margin-bottom: 10px;">
+                        <div class="panel-inner-rounded">
+                            <h3>Web Developer</h3>
+                            <h5>Telkom WITEL Sidoarjo</h5>
+                            <div style="font-weight: bold;">2015</div>
+                            <br>
+                            <div>Praktek Kerja Lapangan. Membangun Aplikasi HCIS (Home Customer Information System)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color:rgba(235,235, 235);height: fit-content;position: relative;padding-bottom: 50px;">
+        <div class="container" style="min-height: 600px;">
+            <div style="width:fit-content;display: block;padding-top: 100px;" class="mx-auto">
+                <div style="font-size: 30px;width: fit-content;color: navy;" class="row mx-auto"><div>Hobi<hr></div></div>
+            </div>
+            <div class="row" style="margin-top: 80px;color: gray;padding-right: 10px; padding-left: 10px;min-height: 500px;width: 100%;font-size: 25px;margin-bottom: 20px;">
+                <div class="col-md-4 col-xs-12 panel-inner" style="background-image: url('images/bg1.jpg');background-size: cover;color: white;">
+                    <div style="font-size: 80px;width: fit-content;margin-top: 100px;" class="mx-auto">
+                        <i class="bi bi-file-code"></i>
+                    </div>
+                    <br>
+                    <div style="width: fit-content;" class="mx-auto">
+                        Mengasah Skill Coding
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 panel-inner" style="background-image: url('images/bg3.JPG');background-size: cover;color: white;">
+                    <div style="font-size: 80px;width: fit-content;margin-top: 100px" class="mx-auto">
+                        <i class="bi bi-egg-fried"></i>
+                    </div>
+                    <br>
+                    <div style="width: fit-content;" class="mx-auto">
+                       Travel & Kuliner
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 panel-inner" style="background-image: url('images/bg5.jpg');background-size: cover;color: white;">
+                    <div style="font-size: 80px;width: fit-content;margin-top: 100px" class="mx-auto">
+                        <i class="bi bi-camera"></i>
+                    </div>
+                    <br>
+                    <div style="width: fit-content;" class="mx-auto">
+                      Fotografi & Ilustrasi
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+<script>
+
+    const pendidikan = [
+            { "id": "sd", "instansi" : "SDN Candipari 1", "tahun" : "2000", "keterangan" : "" },
+            { "id": "smp", "instansi" : "SMP Kemala Bhayangkari 7", "tahun" : "2000", "keterangan" : "" },
+            { "id": "sma", "instansi" : "SMA Kemala Bhayangkari 3", "tahun" : "2000", "keterangan" : "" },
+            { "id": "universitas", "instansi" : "Universitas Muhammadiyah Sidoarjo", "tahun" : "2012 - 2016", "keterangan" : "Lulus Pada Tahun 2016, Jurusan Teknik Informatika. <br> Lulus dengan IPK 3.33"},
+        ];
+
+   let n = 0; 
+   sambutan(n);
+   setInterval("sambutan(n)", 5000);
+   showContentPendidikan(pendidikan);
+//    showPosterMe();
+
+   function sambutan(ind){
+        const arrSambutan = ['Wellcome', 'Selamat Datang', 'Monggo Pinarak'];
+        const item = arrSambutan[ind];
+        const txt = $(".txt-welcome");
+        txt.html("");
+        txt.hide("slow");
+        txt.html(item);
+        txt.show("slow");
+        n = ind == (arrSambutan.length - 1) ? 0 : n + 1;
+
+   }
+
+   function showPosterMe(){
+       const img = $(".img-poster-me").animate({"top":"100px"}, 1000);
+   }
+
+    function showContentPendidikan(par){
+       const arrPendidikan = par;
+       let str = "";
+       
+       $.each(arrPendidikan, function(i, item){
+           const h = (i + 1) * 100;
+           const z = (i + 4);
+           const bt = (pendidikan.length - (i + 1)) * 100;
+           const tittle = vertikaldown(item.id);
+
+           const css1 = "height:300px;width:100px;background-color:rgba(235,235, 235);float:left;z-index:"+z+";box-shadow: 0px 5px 6px 0px grey;padding:10px;cursor:pointer;";
+           const css2 = "height:300px;width:500px;background-color:violet;float:left;z-index:"+z+";box-shadow: 0px 5px 6px 0px gray;padding:50px;cursor:pointer;color:white";
+
+           if ((i+1) < arrPendidikan.length){
+                str += "<div style='"+css1+"' class='bar-pendidikan bar-hover' id='"+item.id+"'>"+
+                       "<span id='tittle-pendidikan-"+item.id+"'>"+tittle+"</span></div>";
+
+           } else {
+                const strdetail = "<div style='font-weight:bold;font-size:25px;'>" + item.instansi + "</div>" + 
+                    "<div>"+item.tahun+"</div><br/>" + 
+                    "<div>"+item.keterangan+"</div>";
+
+                str += "<div style='"+css2+"' class='bar-pendidikan bar-hover' id='"+item.id+"'>"+
+                       "<span id='tittle-pendidikan-"+item.id+"'>"+strdetail+"</span></div>";
+           }
+       });
+       $(".content-pendidikan").html(str);
+   }
+
+   function vertikaldown(tt){
+        const arrTitle = tt.split("");
+        let tittle = "";
+        $.each(arrTitle, function(n,detail){
+            tittle += arrTitle[n].toUpperCase() + " <br>";
+        })
+        return "<span style='font-weight:bold;color:navy;'>"+tittle+"</span>";
+   }
+   
+   $(".bar-pendidikan").click(function(){
+       resetAllBar();
+       $(this).prop("class", "bar-pendidikan")
+       $(this).animate(
+            { 
+                width : "500px"
+            }
+            ,"fast");
+        
+            
+        $(this).css({
+            "background-color" : "violet",
+            "color" : "white",
+            "padding" : "50px"
+        }).fadeIn("slow"); 
+
+        const id = this.id;
+        const arr = pendidikan.filter(p => p.id === id);
+        const obj = arr[0];
+
+        const str = "<div style='font-weight:bold;font-size:25px;'>" + obj.instansi + "</div>" + 
+                    "<div>"+obj.tahun+"</div><br/>" + 
+                    "<div>"+obj.keterangan+"</div>";
+
+        $("#tittle-pendidikan-"+id).html(str).fadeIn("slow");
+   });
+
+   function resetAllBar(){
+        const bar = $(".bar-pendidikan");
+        $.each(bar, function(i, item){
+            const id = bar[i].id;
+            const tittle = vertikaldown(id);
+            $("#tittle-pendidikan-"+id).html(tittle);
+            
+            $(bar[i]).animate({ width : "100px" },"fast");
+            $(bar[i]).css({
+                "background-color" : "rgba(235,235, 235)",
+                "color" : "black",
+                "padding" : "10px"
+            }).fadeIn("slow");        
+            $(bar[i]).prop("class", "bar-pendidikan bar-hover");
+        });
+   }
+
+   
+
+
+
+
+</script>
+</html>
