@@ -37,34 +37,41 @@
             background-image: url('images/bg2.jpg'); background-repeat: no-repeat;background-size: cover;background-attachment: fixed;background-position: center;
         }
         .panel-inner-rounded:hover{
+            transition: 0.5s;
             background-color: blueviolet;color: white;cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <div style="padding-top: 20px;min-height: 600px;background-color:rgba(235,235, 235);">
+    <div class="bg-pt" style="padding-top: 20px;min-height: 600px;">
 
         <div class="container">
-            <div class="row " style="min-height: 50px;position: relative;">
-                <div class="col-md-1 col-xs-2">
-                    <h3 class="bi bi-chat-left-heart-fill navy mx-auto" style="width: fit-content;"></h3>
-                </div>
-                <div class="col-md-11 col-xs-10">
-                    <h3><span class="txt-welcome" style="display:none;"></span></h3>
-                </div>
-            </div>
+           
            
             <div class="row rounded-3 grd" style="color: white;box-shadow: 2px 5px 6px 0px gray; height:450px;padding-top: 60px; padding-bottom: 60px; padding-left: 40px; padding-right: 80px; position: relative;z-index: 1;margin-bottom: 20px;" >
                     <div class="col-md-6 col-xs-12 ">
                         <div style="width: fit-content;display: block;font-size: 60px;">Hi !</div>
+
+                        <div class="row " style="min-height: 50px;position: relative;">
+                            <div class="col-md-1 col-xs-2">
+                                <h3 class="bi bi-chat-left-heart-fill mx-auto" style="width: fit-content;"></h3>
+                            </div>
+                            <div class="col-md-11 col-xs-10">
+                                <h3><span class="txt-welcome" style="display:none;"></span></h3>
+                            </div>
+                        </div>
+
+                        <br>
+                        
                         <div style="font-size: 18px;">Saya <span style="font-weight: bold;font-size: 30px;">Sigit Wahyu Wibowo</span>. </div>
                         <div style="font-size: 18px;">Seorang <span style="font-weight: bold;font-size: 30px;">WEB Developer</span>. Senang Bertemu dengan Anda.</div>
                         <div style="font-size: 18px;"><span style="font-weight: bold;">Scroll Kebawah</span> untuk Mengetahui Lebih Lagi tentang Saya.</div>
                         <!-- <button type="button" class="btn btn-dark mx-auto" style="display:block;width:fit-content;font-size: 18px;margin-top: 70px;"><i class="bi bi-box-arrow-in-down-right"></i> Mulai Tour</button> -->
+
                     </div>
                     <div class="col-md-6 col-xs-12 ">
-                        <img src="images/poster_me.png" style="display: block;width: fit-content;position: relative;z-index: 2;" class="mx-auto img-poster-me"/>
+                        <img src="images/poster_me.png" style="display: block;width: fit-content;position: relative;z-index: 2;margin-top: 150px;" class="mx-auto img-poster-me"/>
                     </div>
             </div>
 
@@ -75,12 +82,13 @@
         <div class="container">
             <div style="width:fit-content;display: block;padding-top: 60px;" class="mx-auto">
                 <div style="font-size: 30px;width: fit-content;color: navy;" class="row mx-auto"><div>Pendidikan Formal<hr></div></div>
-                <div class="row" style="margin-top: 40px;">
-                    <div class="col-md-12 content-pendidikan" style="position:relative;overflow-x: scroll;height: fit-content;"></div>
+                <div style="margin-top: 40px;">
+                    <div class="row content-pendidikan" style="position:relative;overflow-x: scroll;height: fit-content;"></div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="bg-img-parallax" style="position: relative;height: fit-content; padding-bottom: 50px;">
         <div class="container">
             <div style="width:fit-content;display: block;padding-top: 60px;" class="mx-auto">
@@ -160,7 +168,8 @@
    sambutan(n);
    setInterval("sambutan(n)", 5000);
    showContentPendidikan(pendidikan);
-//    showPosterMe();
+//    setTimeout("showPosterMe()",300);
+   showPosterMe();
 
    function sambutan(ind){
         const arrSambutan = ['Wellcome', 'Selamat Datang', 'Monggo Pinarak'];
@@ -175,7 +184,7 @@
    }
 
    function showPosterMe(){
-       const img = $(".img-poster-me").animate({"top":"100px"}, 1000);
+       const img = $(".img-poster-me").animate({"bottom":"100px"}, 1000);
    }
 
     function showContentPendidikan(par){
@@ -192,7 +201,7 @@
            const css2 = "height:300px;width:500px;background-color:violet;float:left;z-index:"+z+";box-shadow: 0px 5px 6px 0px gray;padding:50px;cursor:pointer;color:white";
 
            if ((i+1) < arrPendidikan.length){
-                str += "<div style='"+css1+"' class='bar-pendidikan bar-hover' id='"+item.id+"'>"+
+                str += "<div style='"+css1+"' class='bar-pendidikan bar-hover col-md-2 col-xs-12' id='"+item.id+"'>"+
                        "<span id='tittle-pendidikan-"+item.id+"'>"+tittle+"</span></div>";
 
            } else {
@@ -200,7 +209,7 @@
                     "<div>"+item.tahun+"</div><br/>" + 
                     "<div>"+item.keterangan+"</div>";
 
-                str += "<div style='"+css2+"' class='bar-pendidikan bar-hover' id='"+item.id+"'>"+
+                str += "<div style='"+css2+"' class='bar-pendidikan bar-hover col-md-6 col-xs-12' id='"+item.id+"'>"+
                        "<span id='tittle-pendidikan-"+item.id+"'>"+strdetail+"</span></div>";
            }
        });
@@ -229,7 +238,8 @@
         $(this).css({
             "background-color" : "violet",
             "color" : "white",
-            "padding" : "50px"
+            "padding" : "50px",
+            "transition" : "0.3s"
         }).fadeIn("slow"); 
 
         const id = this.id;
