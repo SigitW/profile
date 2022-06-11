@@ -12,9 +12,13 @@
     <style>
         .grd{
             background-image: linear-gradient(to right, navy ,#ee82ee);
+            box-shadow: 2px 5px 6px 0px gray;
         }
         .bg-pt{
             background-image: url('images/doodad.png');
+        }
+        .bg-hero{
+            background-image: url('images/stardust.png');
         }
         .navy{
             color: navy;
@@ -44,25 +48,24 @@
 </head>
 <body>
 
-    <div class="bg-pt" style="padding-top: 20px;min-height: 600px;">
+    <div class="bg-pt" style="padding-top: 80px;padding-bottom: 80px;">
 
         <div class="container">
-           
-           
-            <div class="row rounded-3 grd" style="color: white;box-shadow: 2px 5px 6px 0px gray; height:450px;padding-top: 60px; padding-bottom: 60px; padding-left: 40px; padding-right: 80px; position: relative;z-index: 1;margin-bottom: 20px;" >
-                    <div class="col-md-6 col-xs-12 ">
+            <div class="row rounded-3 grd">
+                <div class="">
+                    <div class="col-md-12 col-xs-12" style="color: white; height:fit-content;padding-top: 60px; padding-bottom: 60px; padding-left: 40px; padding-right: 80px; position: relative;z-index: 1;">
                         <div style="width: fit-content;display: block;font-size: 60px;">Hi !</div>
+                        <br>
 
-                        <div class="row " style="min-height: 50px;position: relative;">
-                            <div class="col-md-1 col-xs-2">
-                                <h3 class="bi bi-chat-left-heart-fill mx-auto" style="width: fit-content;"></h3>
+                        <div class="row" style="min-height: 50px;position: relative;">
+                            <div class="col-md-1 col-xs-12">
+                                <h3 class="bi bi-chat-left-heart-fill"></h3>
                             </div>
-                            <div class="col-md-11 col-xs-10">
+                            <div class="col-md-11 col-xs-12">
                                 <h3><span class="txt-welcome" style="display:none;"></span></h3>
                             </div>
                         </div>
 
-                        <br>
                         
                         <div style="font-size: 18px;">Saya <span style="font-weight: bold;font-size: 30px;">Sigit Wahyu Wibowo</span>. </div>
                         <div style="font-size: 18px;">Seorang <span style="font-weight: bold;font-size: 30px;">WEB Developer</span>. Senang Bertemu dengan Anda.</div>
@@ -70,9 +73,11 @@
                         <!-- <button type="button" class="btn btn-dark mx-auto" style="display:block;width:fit-content;font-size: 18px;margin-top: 70px;"><i class="bi bi-box-arrow-in-down-right"></i> Mulai Tour</button> -->
 
                     </div>
-                    <div class="col-md-6 col-xs-12 ">
+                </div>
+                    
+                    <!-- <div class="col-md-6 col-xs-12 ">
                         <img src="images/poster_me.png" style="display: block;width: fit-content;position: relative;z-index: 2;margin-top: 150px;" class="mx-auto img-poster-me"/>
-                    </div>
+                    </div> -->
             </div>
 
         </div>
@@ -83,7 +88,7 @@
             <div style="width:fit-content;display: block;padding-top: 60px;" class="mx-auto">
                 <div style="font-size: 30px;width: fit-content;color: navy;" class="row mx-auto"><div>Pendidikan Formal<hr></div></div>
                 <div style="margin-top: 40px;">
-                    <div class="row content-pendidikan" style="position:relative;overflow-x: scroll;height: fit-content;"></div>
+                    <!-- <div class="row content-pendidikan" style="position:relative;overflow-x: scroll;height: fit-content;"></div> -->
                 </div>
             </div>
         </div>
@@ -122,7 +127,7 @@
             <div style="width:fit-content;display: block;padding-top: 60px;" class="mx-auto">
                 <div style="font-size: 30px;width: fit-content;color: navy;" class="row mx-auto"><div>Hobi<hr></div></div>
             </div>
-            <div class="row" style="margin-top: 40px;color: gray;padding-right: 10px; padding-left: 10px;min-height: 500px;width: 100%;font-size: 25px;margin-bottom: 20px;">
+            <div class="row mx-auto" style="margin-top: 40px;color: gray;padding-right: 10px; padding-left: 10px;min-height: 500px;width: 100%;font-size: 25px;margin-bottom: 20px;">
                 <div class="col-md-4 col-xs-12 panel-inner" style="background-image: url('images/bg1.jpg');background-size: cover;color: white;">
                     <div style="font-size: 100px;width: fit-content;margin-top: 100px;" class="mx-auto">
                         <i class="bi bi-file-code"></i>
@@ -167,9 +172,9 @@
    let n = 0; 
    sambutan(n);
    setInterval("sambutan(n)", 5000);
-   showContentPendidikan(pendidikan);
+//    showContentPendidikan(pendidikan);
 //    setTimeout("showPosterMe()",300);
-   showPosterMe();
+//    showPosterMe();
 
    function sambutan(ind){
         const arrSambutan = ['Wellcome', 'Selamat Datang', 'Monggo Pinarak'];
